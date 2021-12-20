@@ -317,9 +317,30 @@ namespace MordochkaRom
            
         }
         Addclient AddForm = new Addclient();
+        public string stat;
         private void btnAddClient_Click(object sender, EventArgs e)
         {
+            stat = "add";
             AddForm = new Addclient();
+            AddForm.Show();
+        }
+
+       
+        private void BtnUpd_Click(object sender, EventArgs e)
+        {
+            stat = "upd";
+            AddForm = new Addclient();
+            int rowindex = dataGridViewClients.CurrentCell.RowIndex;
+            AddForm.textBoxID.Text= dataGridViewClients.Rows[rowindex].Cells[0].Value.ToString();
+            AddForm.textBoxFirstName.Text = dataGridViewClients.Rows[rowindex].Cells[1].Value.ToString();
+            AddForm.textBoxLastName.Text = dataGridViewClients.Rows[rowindex].Cells[2].Value.ToString();
+            AddForm.textBoxPatronymic.Text = dataGridViewClients.Rows[rowindex].Cells[3].Value.ToString();
+            string date = dataGridViewClients.Rows[rowindex].Cells[4].Value.ToString();
+            var parcedDate = DateTime.Parse(date);
+            AddForm.dateTimePicker1.Value = parcedDate;
+            AddForm.textBoxEmail.Text = dataGridViewClients.Rows[rowindex].Cells[6].Value.ToString();
+            AddForm.textBoxPhone.Text = dataGridViewClients.Rows[rowindex].Cells[7].Value.ToString();
+            AddForm.gender = dataGridViewClients.Rows[rowindex].Cells[8].Value.ToString();           
             AddForm.Show();
         }
     }

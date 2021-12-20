@@ -60,6 +60,7 @@ namespace MordochkaRom
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.labelNameDel = new System.Windows.Forms.Label();
             this.btnAddClient = new System.Windows.Forms.Button();
+            this.BtnUpd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -404,14 +405,26 @@ namespace MordochkaRom
             // btnAddClient
             // 
             this.btnAddClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.btnAddClient.Location = new System.Drawing.Point(723, 473);
+            this.btnAddClient.Location = new System.Drawing.Point(752, 474);
             this.btnAddClient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(189, 35);
+            this.btnAddClient.Size = new System.Drawing.Size(189, 47);
             this.btnAddClient.TabIndex = 16;
             this.btnAddClient.Text = "Добавить пользователя";
             this.btnAddClient.UseVisualStyleBackColor = false;
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
+            // 
+            // BtnUpd
+            // 
+            this.BtnUpd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
+            this.BtnUpd.Location = new System.Drawing.Point(752, 529);
+            this.BtnUpd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnUpd.Name = "BtnUpd";
+            this.BtnUpd.Size = new System.Drawing.Size(189, 46);
+            this.BtnUpd.TabIndex = 17;
+            this.BtnUpd.Text = "Редактирование пользователя";
+            this.BtnUpd.UseVisualStyleBackColor = false;
+            this.BtnUpd.Click += new System.EventHandler(this.BtnUpd_Click);
             // 
             // FormClients
             // 
@@ -419,6 +432,7 @@ namespace MordochkaRom
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1212, 578);
+            this.Controls.Add(this.BtnUpd);
             this.Controls.Add(this.btnAddClient);
             this.Controls.Add(this.labelNameDel);
             this.Controls.Add(this.textBoxID);
@@ -479,6 +493,7 @@ namespace MordochkaRom
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label labelNameDel;
         private System.Windows.Forms.Button btnAddClient;
+        private System.Windows.Forms.Button BtnUpd;
     }
 }
 
